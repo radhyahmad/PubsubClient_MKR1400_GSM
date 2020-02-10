@@ -4,7 +4,7 @@
 #define TOKEN ""
 const char PINNUMBER[]     = "";
 // APN data
-const char GPRS_APN[]      = "internet"; //internet
+const char GPRS_APN[]      = "internet"; //Setup APN of XL Axiata
 const char GPRS_LOGIN[]    = "";
 const char GPRS_PASSWORD[] = "";
 
