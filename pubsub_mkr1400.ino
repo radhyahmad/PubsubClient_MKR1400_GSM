@@ -1,7 +1,7 @@
 #include <PubSubClient.h>
 #include <MKRGSM.h>
 
-#define TOKEN "IFSO0PF6IOS1w8y25hfL"
+#define TOKEN ""
 const char PINNUMBER[]     = "";
 // APN data
 const char GPRS_APN[]      = "internet"; //internet
@@ -122,7 +122,7 @@ void reconnect(){
 
   while(!client.connected()){
 
-    if(client.connect("1234e810-49ef-11ea-b757-833b99914e57", TOKEN, NULL)){
+    if(client.connect("ClientID", TOKEN, NULL)){
       Serial.println("connected to the server");
     }
     else{
