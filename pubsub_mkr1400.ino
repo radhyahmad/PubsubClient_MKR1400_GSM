@@ -54,10 +54,7 @@ void setup() {
   Serial.println(": You're connected to the network");
   Serial.println();
   client.setServer(server, port);
-  Serial.print("Attempting to connect to the MQTT broker: ");
   Serial.println(server);
-
-  Serial.println("You're connected to the MQTT broker!");
   digitalWrite(LED_BUILTIN, HIGH);
   
   Serial.println();
@@ -121,9 +118,10 @@ void getData(){
 void reconnect(){
 
   while(!client.connected()){
+     Serial.print("Attempting to connect to the MQTT broker: ");
 
     if(client.connect("ClientID", TOKEN, NULL)){
-      Serial.println("connected to the server");
+      Serial.println("You're connected to the MQTT broker!");
     }
     else{
       Serial.print("Failed!");
